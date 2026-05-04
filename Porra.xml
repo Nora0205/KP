@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>3POO_5</name>
+  </assembly>
+
+  <members>
+
+    <!-- ===================== NAMESPACE ===================== -->
+    <member name="N:_3POO_5">
+      <summary>
+        3POO_5 namespace-a porra sistemaren klaseak biltzen ditu.
+      </summary>
+    </member>
+
+    <!-- ===================== PORRA CLASS ===================== -->
+    <member name="T:_3POO_5.Porra">
+      <summary>
+        Porra klasea: erabiltzaile baten apustua eta puntuazioa kudeatzen du.
+      </summary>
+      <remarks>
+        Klase honek honako informazioa gordetzen du:
+        - Taldearen izena
+        - Irabazlea
+        - Finalista
+        - Goleatzailea
+        - Puntuak
+      </remarks>
+    </member>
+
+    <!-- ===== PROPERTIES ===== -->
+
+    <member name="P:_3POO_5.Porra.Izena">
+      <summary>Parte-hartzailearen izena.</summary>
+    </member>
+
+    <member name="P:_3POO_5.Porra.Irabazlea">
+      <summary>Irabazlearen aurreikuspena.</summary>
+    </member>
+
+    <member name="P:_3POO_5.Porra.Finalista">
+      <summary>Finalistaren aurreikuspena.</summary>
+    </member>
+
+    <member name="P:_3POO_5.Porra.Goleatzailea">
+      <summary>Goleatzailearen aurreikuspena.</summary>
+    </member>
+
+    <member name="P:_3POO_5.Porra.Puntuak">
+      <summary>Lortutako puntuak.</summary>
+    </member>
+
+    <!-- ===== CONSTRUCTOR ===== -->
+
+    <member name="M:_3POO_5.Porra.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
+      <summary>
+        Porra objektua sortzeko eraikitzailea.
+      </summary>
+      <param name="i">Parte-hartzailearen izena</param>
+      <param name="ir">Irabazlea</param>
+      <param name="fi">Finalista</param>
+      <param name="go">Goleatzailea</param>
+      <param name="p">Hasierako puntuak</param>
+    </member>
+
+    <!-- ===== METHODS ===== -->
+
+    <member name="M:_3POO_5.Porra.Pantailaratu">
+      <summary>
+        Porraren informazioa pantailaratzeko testu formatua sortzen du.
+      </summary>
+      <returns>String formatuan deskribapena</returns>
+    </member>
+
+    <member name="M:_3POO_5.Porra.ToString">
+      <summary>
+        Objektua fitxategirako formatura bihurtzen du.
+      </summary>
+      <returns>izena-irabazlea-finalista-goleatzailea-puntuak</returns>
+    </member>
+
+    <member name="M:_3POO_5.Porra.AsmatuIrabazlea">
+      <summary>
+        Irabazlea asmatzeagatik puntuak gehitzen ditu.
+      </summary>
+      <returns>Puntu eguneratuak (+25)</returns>
+    </member>
+
+    <member name="M:_3POO_5.Porra.AsmatuBiFinalistak">
+      <summary>
+        Bi finalistak asmatzeagatik puntuak gehitzen ditu.
+      </summary>
+      <returns>Puntu eguneratuak (+20)</returns>
+    </member>
+
+    <member name="M:_3POO_5.Porra.Goleko">
+      <summary>
+        Goleatzailea asmatzeagatik puntuak gehitzen ditu.
+      </summary>
+      <returns>Puntu eguneratuak (+3)</returns>
+    </member>
+
+    <!-- ===================== PROGRAM CLASS ===================== -->
+
+    <member name="T:_3POO_5.Program">
+      <summary>
+        Program klasea: porra sistemaren kudeaketa egiten du.
+      </summary>
+      <remarks>
+        Fitxategitik datuak irakurri, menu bidez kudeatu eta emaitzak eguneratzen ditu.
+      </remarks>
+    </member>
+
+    <member name="F:_3POO_5.Program.lp">
+      <summary>Porra objektuen zerrenda nagusia.</summary>
+    </member>
+
+    <member name="M:_3POO_5.Program.Main">
+      <summary>
+        Programaren sarrera puntua. Menu nagusia exekutatzen du.
+      </summary>
+    </member>
+
+    <member name="M:_3POO_5.Program.SartuEmaitzak">
+      <summary>
+        Partiduaren emaitzak sartzen ditu eta puntuak eguneratzen ditu.
+      </summary>
+    </member>
+
+    <member name="M:_3POO_5.Program.lortugolak">
+      <summary>
+        Gol kopurua eskuz sartzeko metodoa.
+      </summary>
+      <returns>Gol kopurua</returns>
+    </member>
+
+    <member name="M:_3POO_5.Program.IrabazleeiPuntuEguneraketa(System.String)">
+      <summary>
+        Irabazlea asmatzen dutenen puntuak eguneratzen ditu.
+      </summary>
+      <param name="ir">Irabazlearen izena</param>
+    </member>
+
+    <member name="M:_3POO_5.Program.FinalisteiPuntuEguneraketa(System.String,System.String)">
+      <summary>
+        Bi finalistak asmatzen dituztenen puntuak eguneratzen ditu.
+      </summary>
+      <param name="fi">1. finalista</param>
+      <param name="ir">2. finalista</param>
+    </member>
+
+    <member name="M:_3POO_5.Program.GoleatzaileenPuntuEguneraketa(System.String)">
+      <summary>
+        Goleatzailea asmatzen dutenen puntuak eguneratzen ditu.
+      </summary>
+      <param name="gol">Goleatzailearen izena</param>
+    </member>
+
+    <member name="M:_3POO_5.Program.FitxategiaIrakurri">
+      <summary>
+        porrak.txt fitxategitik datuak kargatzen ditu.
+      </summary>
+    </member>
+
+    <member name="M:_3POO_5.Program.FitxategiraPuntuak">
+      <summary>
+        Puntu eguneratuak fitxategian gordetzen ditu.
+      </summary>
+    </member>
+
+    <member name="M:_3POO_5.Program.InprimatuPorrak">
+      <summary>
+        Porren egoera pantailan bistaratzen du.
+      </summary>
+    </member>
+
+  </members>
+</doc>
